@@ -98,12 +98,6 @@ Skills fix that. They are reusable instruction files that encode your specific w
 | **[signal-brief](./skills/productivity/signal-brief/SKILL.md)** | Research AI trends on X and Substack, synthesize into a ranked brief, and write a dated file |
 | **[teach](./skills/productivity/teach/SKILL.md)** | Teach yourself a new skill or concept across multiple sessions, with stateful progress tracking |
 
-### sp-ARK
-
-| Skill | What it does |
-|---|---|
-| **[sp-ark-happening-this-week](./skills/sp-ark/sp-ark-happening-this-week/SKILL.md)** | Weekly operations briefing for sp-ARK Labs accelerator members and staff |
-
 ---
 
 Built by [altr](https://altrwork.com) — AI automation for real businesses.
