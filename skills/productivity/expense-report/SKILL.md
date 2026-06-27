@@ -5,20 +5,20 @@ description: Scans a designated OneDrive folder for transaction files (Excel, CS
 
 # Expense Report Skill
 
-You are Edwin, the operations manager at sp-ARK labs. When this skill triggers, your job is to scan a OneDrive folder for unprocessed transaction files, extract the payment data from each one, assign an expense category, and write the results into the master expense report Excel file in OneDrive.
+When this skill triggers, your job is to scan a OneDrive folder for unprocessed transaction files, extract the payment data from each one, assign an expense category, and write the results into the master expense report Excel file in OneDrive.
 
 ---
 
 ## Configuration
 
-These values are hardcoded for the sp-ARK environment. Update them if paths change:
+Update these values to match your environment:
 
 | Setting | Value |
 |---|---|
 | **OneDrive source folder** | `Receipts` — browse to the root, open `Receipts`, then navigate into the current month's subfolder (e.g. `May 2026`) |
 | **Master report file** | Search OneDrive for the current month's report (e.g. `May Expense Report.xlsx`) |
 | **Master report sheet** | `Sheet1` (or `Transaction Report` if the sheet was renamed) |
-| **Account split (default)** | `1050 Cash in Bank - Bank of Tampa 5688 (Program)` |
+| **Account split (default)** | Your default chart-of-accounts code (update to match your accounting system) |
 
 ---
 
@@ -34,7 +34,7 @@ Assign every transaction to exactly one of the following five codes. Use the des
 | `6300` | Technology & Software | SaaS subscriptions, software licenses, AI tools, hosting, digital infrastructure |
 | `6400` | Facilities & Infrastructure | Rent, security, building systems, physical infrastructure, maintenance |
 
-> **Note for Edwin:** These are placeholder codes. Replace with the real chart-of-accounts codes once received.
+> **Note:** These are example codes. Replace with your organization's actual chart-of-accounts codes.
 
 ---
 
@@ -150,13 +150,10 @@ For each transaction record, assign it to one of the five expense codes from the
 **Categorization rules:**
 - Read the `Name` (vendor) and `Memo/Description` together.
 - Apply the category definitions above.
-- **Vendor shortcuts** (common sp-ARK vendors):
+- **Vendor shortcuts** (common examples — update to match your vendors):
   - Amazon → `6080` if memo mentions supplies, snacks, kitchen, batteries, cables; `6300` if software/service
   - Anthropic → `6300` Technology & Software
-  - Captivate / Opus Clip / Haven Media / similar content tools → `6200` Marketing & Events
-  - spARK LABS (own domain) → `6080` unless memo indicates otherwise
-  - Pollen Robot → `6080` (office tool/equipment)
-  - Emerge AI Hub → `6200` (event-related)
+  - Content tools (podcast hosts, video editors, similar) → `6200` Marketing & Events
   - Restaurants / cafes → `6080` Office & Operating Expenses - Meals & Hospitality
 
 **Build the Notes field** using this format:

@@ -43,7 +43,7 @@ Spawn a subagent (claude model, default tools) with the following prompt. Replac
 You are a market intelligence agent for altr, an AI automation consultancy. Your job is to research what is trending about AI on X and Substack right now, then synthesize a ranked signal brief and write it to a file.
 
 Today's date: {{TODAY}}
-Output file: /Users/jarredrobidoux/Documents/altr-brain/raw/signals/{{TODAY}}-signal-brief.md
+Output file: ./raw/signals/{{TODAY}}-signal-brief.md
 
 The X API Bearer Token is available as the environment variable `$X_BEARER_TOKEN`. Use it directly in curl commands — do not print or log the token value.
 
@@ -124,7 +124,7 @@ For each category, rank the 3 themes by signal strength (volume + recency + cros
 ### Step 5 — Write the brief
 
 Write the completed brief to:
-`/Users/jarredrobidoux/Documents/altr-brain/raw/signals/{{TODAY}}-signal-brief.md`
+`./raw/signals/{{TODAY}}-signal-brief.md`
 
 Use this exact format:
 
