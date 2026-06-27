@@ -1,0 +1,11 @@
+{
+  "name": "altr-skills",
+  "version": "1.0.0",
+  "private": true,
+  "description": "altr's agent skills for AI-powered business workflows",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/altrwork/skills"
+  },
+  "license": "MIT"
+}
